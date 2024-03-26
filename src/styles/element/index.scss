@@ -30,5 +30,7 @@ $--colors: (
 @use 'element-plus/theme-chalk/src/message.scss' as *;
 @use 'element-plus/theme-chalk/src/notification.scss' as *;
 @use 'element-plus/theme-chalk/src/badge.scss' as *;
+@use 'element-plus/theme-chalk/src/message-box.scss' as *;
+@use 'element-plus/theme-chalk/src/loading.scss' as *;
 
 @use './dark.scss';

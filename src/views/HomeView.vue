@@ -1,14 +1,26 @@
 <script setup lang="ts">
-import { ElMessage } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'element-plus'
 
 import { useToggleDark } from '@/composables'
 
 const showMessage = () => {
-  ElMessage({
-    message: 'Hello, ElMessage!',
-    type: 'success',
-    grouping: true
+  ElMessageBox.confirm('proxy will permanently delete the file. Continue?', 'Warning', {
+    confirmButtonText: 'OK',
+    cancelButtonText: 'Cancel',
+    confirmButtonClass: 'es-button--danger'
   })
+    .then(() => {
+      ElMessage({
+        type: 'success',
+        message: 'Delete completed'
+      })
+    })
+    .catch(() => {
+      ElMessage({
+        type: 'info',
+        message: 'Delete canceled'
+      })
+    })
 }
 </script>
 

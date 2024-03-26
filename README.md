@@ -1,6 +1,14 @@
-# MNEA-dashboard
+# Vue + Element Plus + UnoCSS Template
 
 This template should help get you started developing with Vue 3 in Vite.
+
+## Introduction
+
+Function Component as service need to be import manually, otherwise element plus css vars of default namespace will be bundled redundantly.
+
+```js
+import { ElLoading, ElMessage, ElMessageBox, ElNotification } from 'element-plus'
+```
 
 ## Recommended IDE Setup
 
